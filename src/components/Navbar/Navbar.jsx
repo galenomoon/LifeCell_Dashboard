@@ -13,7 +13,7 @@ export default function Navbar() {
           <h4>Nova Venda</h4>
         </Col>
         <Col className="d-flex justify-content-center p-2  mx-1 option-navbar transition-120ms">
-          <MdPhoneIphone className="fs-3 me-2" />
+          <MdPhoneIphone className="fs-3" />
           <h4>Novo Serviço</h4>
         </Col>
       </Col>
