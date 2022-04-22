@@ -3,6 +3,5 @@ body{
   background-color: #F0F8FF;
   margin: 0;
   padding: 0;
-  left: 0;
-  right: 0;
 }
+.box{ min-height: 50vh }
