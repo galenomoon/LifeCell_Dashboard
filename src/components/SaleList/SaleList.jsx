@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col } from "react-bootstrap";
 
 export default function SaleList({sales}) {
-  const [total, setTotal] = useState(0);
 
   return (
     <Col className="box mt-2">
