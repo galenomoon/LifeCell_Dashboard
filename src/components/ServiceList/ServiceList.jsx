@@ -43,7 +43,7 @@ export default function SaleList() {
       </Col>
       <Col className='box px-3 mx-0 overflow-auto'>
         {services.map(service =>(
-          <Row className='d-flex' key={service.id}>
+          <Row className='d-flex item-list cursor' key={service.id}>
             <Col lg={1} md={1} sm={1} xs={1} className="py-2 d-flex justify-content-center">{service.id}</Col>
             <Col lg={3} md={3} sm={3} xs={3} className="py-2"> {service.client_name} </Col>
             <Col lg={3} md={2} sm={2} xs={2} className="py-2 px-1 d-flex justify-content-start ">  {service.service}  </Col>
