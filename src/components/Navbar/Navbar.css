@@ -1,21 +1,8 @@
-.navbar {
-  background-color: #002244;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-.option-navbar {
-  min-width: 450px
-}
-
-.option-navbar:hover {
-  background: white;
+.transition-120ms { transition: all 120ms ease-in-out }
+.navbar { background-color: #002244 }
+.cursor { cursor: pointer }
+.option-navbar { min-width: 450px }
+.option-navbar:hover {  background: white;
   color: #002244;
   transform: scale(1.01);
-}
-
-.transition-120ms {
-  transition: all 120ms ease-in-out
 }

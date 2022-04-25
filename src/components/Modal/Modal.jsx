@@ -1,25 +1,22 @@
 import React, { useState } from "react";
 import { Col, Modal, Form, Button } from "react-bootstrap";
 
-export default function ModalComponent() {
+export default function ModalComponent({addSale, sales }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [methodPayment, setMethodPayment] = useState("");
-  const [sale, setSale] = useState([]);
 
   const buy = () => {
-    setSale([
-      ...sale,
+    addSale(
       {
-        id: sale.length + 1,
-        name,
-        price,
-        quantity,
-        methodPayment
-      }
-    ]);
-    console.log(sale)
+        id: sales.length + 1,
+        product: name,
+        price: parseInt(price),
+        quantity: quantity,
+        method_of_payment: methodPayment
+      }   
+    );
   }
 
   return (

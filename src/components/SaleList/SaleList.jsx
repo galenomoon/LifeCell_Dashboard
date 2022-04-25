@@ -14,12 +14,12 @@ export default function SaleList({sales}) {
         </Row>
       </Col>
       <Col className='box px-3 mx-0 overflow-auto'>
-        {sales ? sales.map(sale => (
-          <Row className='d-flex item-list' key={sale.id}>
-            <Col lg={2} md={3} sm={3} xs={3} className="py-2 justify-content-center">{sale.quantity}x</Col>
+        {sales ? sales.map((sale, index )=> (
+          <Row className='d-flex item-list' key={index}>
+            <Col lg={2} md={3} sm={3} xs={3} className="py-2 justify-content-center">{sale?.quantity}x</Col>
             <Col lg={4} md={3} sm={3} xs={3} className="py-2 px-1"> {sale.product} </Col>
             <Col lg={2} md={2} sm={2} xs={2} className="py-2 px-1 d-flex justify-content-center"> {sale.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </Col>
-            <Col lg={4} md={4} sm={4} xs={4} className="py-2 d-flex justify-content-center"> {sale.method_of_payment} </Col>
+            <Col lg={4} md={4} sm={4} xs={4} className="py-2 d-flex justify-content-center"> {sale?.method_of_payment} </Col>
           </Row >
         )) :
           <Col className="d-flex justify-content-center text-secondary">
