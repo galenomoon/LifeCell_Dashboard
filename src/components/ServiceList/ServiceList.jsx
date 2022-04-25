@@ -5,7 +5,8 @@ const services = [
   {
     id: 1,
     client_name: "Guilherme Galeno",
-    service_description: "Frontal Completa",
+    service_title: "Frontal Completa",
+    service_description: "A tela está com o touch falhando e uma mancha preta na parte superior direita",
     device: "Motorola",
     model: "Z2 Play",
     service_value: 250,
@@ -13,7 +14,8 @@ const services = [
   {
     id: 2,
     client_name: "Luana Santiago",
-    service_description: "Frontal Completa",
+    service_title: "Desoxidação",
+    service_description: "Aparelho molhou e não está mais ligando, caiu em água salgada",
     device: "Xiaomi",
     model: "Note 9",
     service_value: 150,
@@ -21,7 +23,8 @@ const services = [
   {
     id: 3,
     client_name: "Isabella Galeno",
-    service_description: "Conector de Carga",
+    service_title: "Conector de Carga",
+    service_description: "Não carrega e foi detectado sujeira no dock de carga",
     device: "Motorola",
     model: "G4 Play",
     service_value: 90,
@@ -46,7 +49,7 @@ export default function SaleList() {
           <Row className='d-flex item-list cursor' key={service.id}>
             <Col lg={1} md={1} sm={1} xs={1} className="py-2 d-flex justify-content-center">{service.id}</Col>
             <Col lg={3} md={3} sm={3} xs={3} className="py-2"> {service.client_name} </Col>
-            <Col lg={3} md={2} sm={2} xs={2} className="py-2 px-1 d-flex justify-content-start ">  {service.service_description}  </Col>
+            <Col lg={3} md={2} sm={2} xs={2} className="py-2 px-1 d-flex justify-content-start ">  {service.service_title}  </Col>
             <Col lg={1} md={2} sm={2} xs={2} className="py-2 px-1 d-flex justify-content-center">  {service.device}  </Col>
             <Col lg={2} md={2} sm={2} xs={2} className="py-2 px-1 d-flex justify-content-center">  {service.model}   </Col>
             <Col lg={1} md={2} sm={2} xs={2} className="py-2 d-flex justify-content-center"> {service.service_value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}  </Col>

@@ -13,7 +13,7 @@ export default function Home() {
   const [modalShow, setModalShow] = useState(false)
   const [typeModal, setTypeModal] = useState("");
 
-  useEffect(() => { getSales(); getTotal(sales); }, [])
+  useEffect(() => { getSales(); getTotal(sales); })
 
   const getSales = () => setSales(sales)
 
@@ -22,8 +22,10 @@ export default function Home() {
     sales.map(sale => total += sale.price * sale.quantity)
     setTotal(total)
   }
+  
   const addSale = (sale) => {
     setSales([...sales, sale])
+    setModalShow(false)
     getSales()
     getTotal(sales)
   }

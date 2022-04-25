@@ -16,8 +16,7 @@ export default function Navbar({ setModalShow, setTypeModal }) {
           <MdPhoneIphone className="fs-3" />
           <h4>Novo Serviço</h4>
         </Col>
-      </Col>
- 
+      </Col> 
     </Row>
   )
 }
