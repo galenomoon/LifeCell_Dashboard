@@ -6,7 +6,7 @@ export default function SaleList({sales}) {
   return (
     <Col className="box mt-2">
       <Col className='px-3'>
-        <Row className='d-flex bg-light'>
+        <Row className='d-flex bg-info rounded'>
           <Col lg={2} md={3} sm={3} xs={3} className="fw-bold py-2 justify-content-center">Qtd</Col>
           <Col lg={4} md={3} sm={3} xs={3} className="fw-bold py-2 px-1"> Produto </Col>
           <Col lg={2} md={2} sm={2} xs={2} className="fw-bold py-2 px-1 d-flex justify-content-center"> Preço </Col>
