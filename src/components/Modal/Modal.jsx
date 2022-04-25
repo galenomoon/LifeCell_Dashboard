@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { Col, Modal, Form, Button } from "react-bootstrap";
 
-export default function ModalComponent({addSale, sales }) {
+export default function ModalComponent({addSale, sales, setModalShow }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [methodPayment, setMethodPayment] = useState("");
 
   const buy = () => {
-    addSale(
-      {
+    addSale({
         id: sales.length + 1,
         product: name,
         price: parseInt(price),
         quantity: quantity,
         method_of_payment: methodPayment
-      }   
-    );
+      })
   }
 
   return (
@@ -54,7 +52,7 @@ export default function ModalComponent({addSale, sales }) {
         </Col >
       </Modal.Body >
       <Modal.Footer>
-        <Button className={`px-5`} type="submit" onClick={e => buy()}> Salvar </Button>
+        <Button className={`px-5`} type="submit" onClick={e => [buy(), setModalShow(false)]}> Salvar </Button>
       </Modal.Footer >
     </>
   )

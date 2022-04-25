@@ -15,7 +15,7 @@ export default function SaleList({sales}) {
       </Col>
       <Col className='box px-3 mx-0 overflow-auto'>
         {sales ? sales.map((sale, index )=> (
-          <Row className='d-flex item-list' key={index}>
+          <Row className='d-flex item-list cursor' key={index}>
             <Col lg={2} md={3} sm={3} xs={3} className="py-2 justify-content-center">{sale?.quantity}x</Col>
             <Col lg={4} md={3} sm={3} xs={3} className="py-2 px-1"> {sale.product} </Col>
             <Col lg={2} md={2} sm={2} xs={2} className="py-2 px-1 d-flex justify-content-center"> {sale.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </Col>
